@@ -3,6 +3,13 @@ import java.util.Scanner;
 public class Matrix {
 
 
+    public static void main(String[] args) {
+        Matrix matrix = new Matrix();
+        int razm = matrix.enterFromKeyboard();
+        matrix.print(matrix.makeMatrix(razm));
+    }
+
+
     public int[][] makeMatrix(int num) {
         int[][] mat = new int[num][num];
         for (int i = 0; i < num; i++) {
@@ -16,7 +23,7 @@ public class Matrix {
 
     public int enterFromKeyboard() {
         Scanner scan = new Scanner(System.in);
-        System.out.print("Введите размерность матрицы: ");
+        System.out.print("Enter size of the matrix: ");
         int num = scan.nextInt();
         return num;
     }
@@ -30,10 +37,6 @@ public class Matrix {
             System.out.println();
         }
     }
-    public static void main(String[] args) {
-        Matrix matrix = new Matrix();
-        int razm = matrix.enterFromKeyboard();
-        matrix.print(matrix.makeMatrix(razm));
-    }
+
 
 }
