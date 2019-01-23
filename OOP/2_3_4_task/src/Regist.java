@@ -7,10 +7,6 @@ import java.util.Scanner;
 public class Regist {
     private static boolean isWorking = true;
     private static Regist reg = new Regist();
-
-  //private Stationery.CostComparator costComparator = new Stationery().new CostComparator();
-  //private Stationery.NameComparator nameComparator = new Stationery().new NameComparator();
-  //private Comparator<Stationery> costNameComporator = costComparator.thenComparing(nameComparator);
     private LinkedList<Stationery> stationeries = new LinkedList<Stationery>();
     private Scanner scan = new Scanner(System.in);
 
@@ -164,21 +160,15 @@ public class Regist {
     }
 
     private void sortByCost() {
-       // stationeries.sort(costComparator);
-       // stationeries.sort(Comparator.comparingDouble(o -> o.getCost()));
          stationeries.sort(Comparator.comparingDouble(Stationery::getCost));
 
     }
 
     private void sortByName() {
-        //stationeries.sort(nameComparator);
         stationeries.sort(Comparator.comparing(Stationery::getName));
     }
 
     private void sortByCostName() {
-        // stationeries.sort(costNameComporator);
-        /*stationeries.sort(Comparator.comparingInt((Stationery o) -> (int) o.getCost())
-                .thenComparing(o -> o.getName()));*/
         stationeries.sort(Comparator.comparing(Stationery::getCost)
                     .thenComparing(Stationery::getName));
     }
