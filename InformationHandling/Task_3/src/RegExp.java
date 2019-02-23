@@ -36,7 +36,7 @@ public class RegExp {
     }
 
     private void htmlParser() {
-        Pattern sentencePat = Pattern.compile("(<div>|<p>)(.*(\\([Рр]ис\\. \\d{1,2}\\)).*)(<\\/div>|<\\/p>$)");
+        Pattern sentencePat = Pattern.compile("(<div>|<p>)(.*(\\([Рр]ис\\. \\d{1,2}\\)).*)(</div>|</p>$)");
         Pattern imagePat = Pattern.compile("(\\([Рр]ис\\. \\d{1,2}\\))");
         Scanner scanner = new Scanner(content);
         String str;
