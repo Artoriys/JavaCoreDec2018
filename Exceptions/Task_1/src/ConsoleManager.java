@@ -97,12 +97,14 @@ public class ConsoleManager {
 
     private void showHelp() {
         System.out.println("///////////////////////////////////");
-        System.out.println("Enter 'add' to add new actor");
-        System.out.println("Enter 'standard' to add standard actors");
-        System.out.println("Enter 'save' to save list of actors");
-        System.out.println("Enter 'load' to load list of actors");
-        System.out.println("Enter 'd' to remove actor");
-        System.out.println("Enter 'o' to show all actors");
+        System.out.println("Enter 'root' to move to parent directory");
+        System.out.println("Enter 'cd' to move down to directory");
+        System.out.println("Enter 'showPath' to show current path");
+        System.out.println("Enter 'showFiles' to showFiles in the directory");
+        System.out.println("Enter 'nf' to create new text file");
+        System.out.println("Enter 'read' to read text file");
+        System.out.println("Enter 'write' to write into text file");
+        System.out.println("Enter 'delete' to delete text file (Not directory)");
         System.out.println("Enter 'q' to end session");
         System.out.println("Enter 'help' to show help");
         System.out.println("///////////////////////////////////");
